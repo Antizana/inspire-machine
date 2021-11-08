@@ -1,8 +1,0 @@
-node_modules/
-node_modules_parent
-assets/
-samples/
-.env
-src/bundle.js
-garbaje.js
-
