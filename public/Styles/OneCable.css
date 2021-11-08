@@ -1,0 +1,42 @@
+/* :root {
+  --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e;
+} */
+
+.line {
+  display: block;
+  position: absolute;
+  z-index: -2;
+}
+
+.l1 {
+  /* bottom: 150px;
+  left: 31px; */
+  bottom: 10.98vmax;
+  left: 2.27vmax;
+  color: #847f87;
+  color: var(--palette4, #847f87);
+}
+
+.l2 {
+  /* top: 40px;
+  left: 345px; */
+  top: 2.93vmax;
+  left: 25.26vmax;
+  color: #847f87;
+  color: var(--palette4, #847f87);
+}
+
+.cableLine {
+  stroke: #847f87;
+  stroke: var(--palette4, #847f87);
+  stroke-width: 2;
+}
+
+#c5 {
+  fill: #dec0bb;
+  fill: var(--palette3, #dec0bb);
+}

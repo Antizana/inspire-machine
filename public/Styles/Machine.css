@@ -1,0 +1,343 @@
+:root {
+  /* --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e; */
+
+  --gear1: #e6c3a5;
+  --gear2: #f7e4dd;
+  --gear3: #a99279;
+  --gear4: #a78e7b;
+  --gear5: #c4a98d;
+}
+
+.machine {
+  position: relative;
+  /* margin-top: 100px; */
+  margin-top: 7.32vmax;
+  /* height: 193px;
+  width: 370px; */
+  height: 14.13vmax;
+  width: 27.09vmax;
+  background-image: url(../assets/images/machineFrame.png);
+  background-size: 100%;
+  border: solid 1px;
+  border-color: #dec0bb;
+  border-color: var(--palette3, #dec0bb);
+}
+
+.gear::before,
+.gear::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.gear.rotate-right::before {
+  animation: right 4s ease;
+  -moz-animation: right 4s ease;
+  -webkit-animation: right 4s ease;
+  -o-animation: right 4s ease;
+}
+
+.gear.rotate-left::after {
+  animation: left 4s ease;
+  -moz-animation: left 4s ease;
+  -webkit-animation: left 4s ease;
+  -o-animation: left 4s ease;
+}
+
+/* Small Gear */
+.gear1::before {
+  /* width: 80px;
+  height: 80px;
+  top: 59px; */
+  width: 5.86vmax;
+  height: 5.86vmax;
+  top: 4.32vmax;
+
+  background-image: 
+    /* inner circle */ radial-gradient(
+      at center center,
+      #f7e4dd 23%,
+      var(--gear2, #f7e4dd) 23%,
+      #c4a98d 25%,
+      var(--gear5, #c4a98d) 25%,
+      #a78e7b 58%,
+      var(--gear4, #a78e7b) 58%,
+      transparent 59%
+    ),
+    /* horizontal tooth */
+      linear-gradient(
+        0deg,
+        transparent 40%,
+        #a78e7b 40%,
+        var(--gear4, #a78e7b) 40%,
+        #a78e7b 60%,
+        var(--gear4, #a78e7b) 60%,
+        transparent 60%
+      ),
+    /* 45deg tooth */
+      linear-gradient(
+        45deg,
+        transparent 43%,
+        #a78e7b 43.5%,
+        var(--gear4, #a78e7b) 43.5%,
+        #a78e7b 57%,
+        var(--gear4, #a78e7b) 57%,
+        transparent 57%
+      ),
+    /* vertical tooth */
+      linear-gradient(
+        90deg,
+        transparent 40%,
+        #a78e7b 40%,
+        var(--gear4, #a78e7b) 40%,
+        #a78e7b 60%,
+        var(--gear4, #a78e7b) 60%,
+        transparent 60%
+      ),
+    /* 135deg  tooth */
+      linear-gradient(
+        135deg,
+        transparent 43%,
+        #a78e7b 43.5%,
+        var(--gear4, #a78e7b) 43.5%,
+        #a78e7b 57%,
+        var(--gear4, #a78e7b) 57%,
+        transparent 57%
+      );
+}
+
+/* First Medium Gear */
+.gear1::after {
+  /* width: 100px;
+  height: 100px;
+  left: 64px; */
+  width: 7.32vmax;
+  height: 7.32vmax;
+  left: 4.69vmax;
+  background-image: radial-gradient(
+      at center center,
+      var(--gear2, #f7e4dd) 30%,
+      var(--gear5, #c4a98d) 32%,
+      var(--gear5, #c4a98d) 58%,
+      transparent 59%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 40%,
+      #c4a98d 40%,
+      var(--gear5, #c4a98d) 40%,
+      #c4a98d 60%,
+      var(--gear5, #c4a98d) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 43%,
+      #c4a98d 43.5%,
+      var(--gear5, #c4a98d) 43.5%,
+      #c4a98d 57%,
+      var(--gear5, #c4a98d) 57%,
+      transparent 57%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 40%,
+      #c4a98d 40%,
+      var(--gear5, #c4a98d) 40%,
+      #c4a98d 60%,
+      var(--gear5, #c4a98d) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 43%,
+      #c4a98d 43.5%,
+      var(--gear5, #c4a98d) 43.5%,
+      #c4a98d 57%,
+      var(--gear5, #c4a98d) 57%,
+      transparent 57%
+    );
+}
+
+/* Big Gear */
+.gear2::before {
+  /* width: 150px;
+  height: 150px;
+  top: 43px;
+  left: 143px; */
+  width: 10.98vmax;
+  height: 10.98vmax;
+  top: 3.15vmax;
+  left: 10.47vmax;
+  background-image: radial-gradient(
+      at center center,
+      #f7e4dd 40%,
+      var(--gear2, #f7e4dd) 40%,
+      #e6c3a5 42%,
+      var(--gear1, #e6c3a5) 42%,
+      #e6c3a5 58%,
+      var(--gear1, #e6c3a5) 58%,
+      transparent 59%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 40%,
+      #e6c3a5 40%,
+      var(--gear1, #e6c3a5) 40%,
+      #e6c3a5 60%,
+      var(--gear1, #e6c3a5) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 43%,
+      #e6c3a5 43.5%,
+      var(--gear1, #e6c3a5) 43.5%,
+      #e6c3a5 57%,
+      var(--gear1, #e6c3a5) 57%,
+      transparent 57%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 40%,
+      #e6c3a5 40%,
+      var(--gear1, #e6c3a5) 40%,
+      #e6c3a5 60%,
+      var(--gear1, #e6c3a5) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 43%,
+      #e6c3a5 43.5%,
+      var(--gear1, #e6c3a5) 43.5%,
+      #e6c3a5 57%,
+      var(--gear1, #e6c3a5) 57%,
+      transparent 57%
+    );
+}
+
+/* Second Medium Gear*/
+.gear2::after {
+  /* width: 100px;
+  height: 100px;
+  left: 271px; */
+  width: 7.32vmax;
+  height: 7.32vmax;
+  left: 19.84vmax;
+  background-image: radial-gradient(
+      at center center,
+      #f7e4dd 30%,
+      var(--gear2, #f7e4dd) 30%,
+      #c4a98d 32%,
+      var(--gear5, #c4a98d) 32%,
+      #c4a98d 58%,
+      var(--gear5, #c4a98d) 58%,
+      transparent 59%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 40%,
+      #c4a98d 40%,
+      var(--gear5, #c4a98d) 40%,
+      #c4a98d 60%,
+      var(--gear5, #c4a98d) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 43%,
+      #c4a98d 43.5%,
+      var(--gear5, #c4a98d) 43.5%,
+      #c4a98d 57%,
+      var(--gear5, #c4a98d) 57%,
+      transparent 57%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 40%,
+      #c4a98d 40%,
+      var(--gear5, #c4a98d) 40%,
+      #c4a98d 60%,
+      var(--gear5, #c4a98d) 60%,
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 43%,
+      #c4a98d 43.5%,
+      var(--gear5, #c4a98d) 43.5%,
+      #c4a98d 57%,
+      var(--gear5, #c4a98d) 57%,
+      transparent 57%
+    );
+}
+
+@keyframes right {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes right {
+  form {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes right {
+  form {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-o-keyframes right {
+  form {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(360deg);
+  }
+}
+@keyframes left {
+  form {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@-moz-keyframes left {
+  form {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes left {
+  form {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-o-keyframes left {
+  form {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(-360deg);
+  }
+}

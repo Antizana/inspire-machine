@@ -1,0 +1,20 @@
+/* :root {
+  --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e;
+} */
+
+.twitt {
+  position: absolute;
+  top: 20.6vmax;
+  right: 0.39vmax;
+  color: #858d9e;
+  color: var(--palette5, #858d9e);
+}
+
+.twitt:hover {
+  color: #dec0bb;
+  color: var(--palette3, #dec0bb);
+}
