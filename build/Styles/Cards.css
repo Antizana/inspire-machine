@@ -1,0 +1,200 @@
+/* :root {
+  --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e;
+} */
+
+.card {
+  font-size: 1.26vmax;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* top: 70px;
+  right: 0;
+  height: 200px;
+  width: 300px; */
+  top: 5.12vmax;
+  right: 0;
+  height: 14.64vmax;
+  width: 21.96vmax;
+  background-color: #858d9e;
+  background-color: var(--palette5, #858d9e);
+  color: #f7e4dd;
+  color: var(--palette2, #f7e4dd);
+  /* border-radius: 5%; */
+}
+
+.qtext {
+  /* padding: 10px;
+  padding-top: 20px; */
+  padding: 0.73vmax;
+  padding-top: 1.46vmax;
+  text-align: left;
+}
+
+.author {
+  position: absolute;
+  /* bottom: 10px;
+  right: 10px; */
+  font-size: 1vmax;
+  bottom: 0.15vmax;
+  right: 0.73vmax;
+  text-align: right;
+}
+
+h1 {
+  /* padding: 20px 0; */
+  padding: 1.46vmax 0;
+  /* font-size: 50px; */
+  font-size: 3.66vmax;
+  text-transform: uppercase;
+}
+
+.pin {
+  /* height: 10px;
+  width: 10px; */
+  height: 0.73vmax;
+  width: 0.73vmax;
+  background-color: #847f87;
+  background-color: var(--palette4, #847f87);
+  border-radius: 50%;
+  position: absolute;
+  /* top: 10px;
+  left: 10px; */
+  top: 0.73vmax;
+  left: 0.73vmax;
+}
+
+.animated {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    -webkit-transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  40% {
+    -webkit-transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  100% {
+    -webkit-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes hinge {
+  0% {
+    -moz-transform: rotate(0);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    -moz-transform: rotate(80deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  40% {
+    -moz-transform: rotate(60deg);
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  80% {
+    -moz-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -moz-transform-origin: top left;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  100% {
+    -moz-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes hinge {
+  0% {
+    -o-transform: rotate(0);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    -o-transform: rotate(80deg);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+  40% {
+    -o-transform: rotate(60deg);
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+  80% {
+    -o-transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -o-transform-origin: top left;
+    -o-animation-timing-function: ease-in-out;
+  }
+  100% {
+    -o-transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  0% {
+    transform: rotate(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}

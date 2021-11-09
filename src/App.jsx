@@ -35,7 +35,6 @@ export class App extends React.Component {
     this.randomInRange = this.randomInRange.bind(this);
     this.randomQuote = this.randomQuote.bind(this);
 
-    // this.doRandomQuote = setInterval(this.retriveQuote, this.randomInRange(18000, 30000));
     this.doRandomQuote = setInterval(
       this.randomQuote,
       this.randomInRange(30000, 120000)
@@ -52,55 +51,66 @@ export class App extends React.Component {
       "Content-Type": "application/json",
     };
 
-    try {
-      fetch(url)
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            try {
-              (async () => {
-                await fetch(urldbGet, {
-                  method: "GET",
-                  headers: headers,
-                }).then((dbResponse) => {
-                  if (dbResponse.ok) {
-                    return dbResponse.json();
-                  } else {
-                    throw dbResponse;
-                  }
-                });
-              })();
-            } catch (e) {
-              console.error(e);
-            }
-          }
-        })
-        .then((data) => {
+    const fetchForismatic = fetch(url, {
+      mode: "cors",
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          console.error(response.status);
+        }
+      })
+      .then((data) => {
+        if (data !== undefined) {
           this.quoteText = data.quoteText;
           if (data.quoteAuthor === "") {
             data.quoteAuthor = "Unknown";
           }
           this.quoteAuthor = data.quoteAuthor;
-          try {
-            (async () => {
-              const rawResponse = await fetch(urldbPost, {
-                method: "POST",
-                headers: headers,
-                body: JSON.stringify({
-                  quoteText: data.quoteText,
-                  quoteAuthor: data.quoteAuthor,
-                }),
-              });
-              await rawResponse.json();
-            })();
-          } catch (e) {
-            console.error(e);
-          }
-        });
-    } catch (e) {
-      console.error(e);
-    }
+
+          (async () => {
+            const rawResponse = await fetch(urldbPost, {
+              method: "POST",
+              headers: headers,
+              body: JSON.stringify({
+                quoteText: data.quoteText,
+                quoteAuthor: data.quoteAuthor,
+              }),
+            });
+            await rawResponse.json();
+          })();
+        } else {
+        }
+      });
+
+    fetchForismatic.catch((error) => {
+      (async () => {
+        fetch(urldbGet, {
+          method: "GET",
+          headers: headers,
+        })
+          .then((dbResponse) => {
+            if (dbResponse.ok) {
+              return dbResponse.json();
+            } else {
+              throw dbResponse;
+            }
+          })
+          .then((data) => {
+            if (data !== undefined) {
+              this.quoteText = data.quoteText;
+              if (data.quoteAuthor === "") {
+                data.quoteAuthor = "Unknown";
+              }
+              this.quoteAuthor = data.quoteAuthor;
+            } else {
+              this.quoteText = "";
+              this.quoteAuthor = "";
+            }
+          });
+      })();
+    });
   }
 
   randomInRange(min, max) {

@@ -1,0 +1,24 @@
+/* :root {
+  --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e;
+} */
+
+.stopper {
+  fill: #847f87;
+  fill: var(--palette4, #847f87);
+  position: absolute;
+  /* top: 31px;
+  right: -19px;
+  height: 60px;
+  width: 60px; */
+  top: 2.5vmax;
+  right: -1.39vmax;
+  /* height: 60px;
+  width: 60px; */
+  height: 4.39vmax;
+  width: 4.39vmax;
+  z-index: 1;
+}

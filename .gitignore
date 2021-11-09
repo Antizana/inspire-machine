@@ -5,4 +5,4 @@ samples/
 .env
 src/bundle.js
 garbaje.js
-
+package copy.json

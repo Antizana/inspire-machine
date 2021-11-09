@@ -1,0 +1,53 @@
+/* :root {
+  --palette1: #ead8d0;
+  --palette2: #f7e4dd;
+  --palette3: #dec0bb;
+  --palette4: #847f87;
+  --palette5: #858d9e;
+} */
+
+button.buttonNewQuote {
+  font-family: "Helvetica", sans-serif;
+  /* margin-top: 50px;
+  height: 80px;
+  width: 80px; */
+  margin-top: 2.5vmax;
+  margin-left: 7.2vmax;
+  font-size: 1.3vmax;
+  height: 5.86vmax;
+  width: 5.86vmax;
+  border: none;
+  color: #f7e4dd;
+  color: var(--palette2, #f7e4dd);
+  background-color: #858d9e;
+  background-color: var(--palette5, #858d9e);
+  border-radius: 50%;
+  box-shadow: 1px 7px 0px #847f87, 0px 9px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 7px 0px var(--palette4, #847f87),
+    0px 9px 25px rgba(0, 0, 0, 0.7);
+  transition: all 0.1s ease;
+  transition: filter 0.5s ease;
+  outline: none;
+}
+
+button:active.buttonNewQuote {
+  box-shadow: 0px 3px 0px #847f87, 0px 3px 6px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 0px var(--palette4, #847f87),
+    0px 3px 6px rgba(0, 0, 0, 0.9);
+}
+
+button:hover {
+  color: #dec0bb;
+  color: var(--palette3, #dec0bb);
+  background-color: #858d9e;
+  background-color: var(--palette5, #858d9e);
+}
+
+button::-moz-focus-inner.buttonNewQuote {
+  border: 0;
+}
+
+.disabled.buttonNewQuote {
+  -webkit-filter: grayscale(0.5);
+  filter: grayscale(0.5);
+}
