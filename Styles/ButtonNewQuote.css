@@ -8,11 +8,9 @@
 
 button.buttonNewQuote {
   font-family: "Helvetica", sans-serif;
-  /* margin-top: 50px;
-  height: 80px;
-  width: 80px; */
-  margin-top: 2.5vmax;
-  margin-left: 7.2vmax;
+  position: fixed;
+  top: 6.5vmax;
+  left: 17vmax;
   font-size: 1.3vmax;
   height: 5.86vmax;
   width: 5.86vmax;

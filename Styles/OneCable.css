@@ -8,24 +8,20 @@
 
 .line {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: -2;
 }
 
 .l1 {
-  /* bottom: 150px;
-  left: 31px; */
-  bottom: 10.98vmax;
-  left: 2.27vmax;
+  top: 1vmax;
+  left: 30vmax;
   color: #847f87;
   color: var(--palette4, #847f87);
 }
 
 .l2 {
-  /* top: 40px;
-  left: 345px; */
-  top: 2.93vmax;
-  left: 25.26vmax;
+  top: 15.2vmax;
+  left: 47.5vmax;
   color: #847f87;
   color: var(--palette4, #847f87);
 }

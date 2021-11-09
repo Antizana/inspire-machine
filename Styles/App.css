@@ -17,16 +17,15 @@ body {
 .container {
   position: relative;
   margin: 0px auto;
-  /* width: 700px;
-  height: 400px; */
-  width: 51.24vmax;
   height: 29.28vmax;
+  width: 90vmax;
 }
 
-.faIcon {
+.faBattery {
+  position: fixed;
+  top: 0vmax;
+  left: 29vmax;
   color: #dec0bb;
   color: var(--palette3, #dec0bb);
   font-size: 2.73vmax;
-  margin-left: 0.2vmax;
-  margin-top: 1.5vmax;
 }
