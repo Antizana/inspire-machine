@@ -18,7 +18,7 @@
   align-items: center;
   position: fixed;
   top: 17.2vmax;
-  right: 10vmax;
+  left: 10vmax;
   width: 21.96vmax;
   height: 26vmax;
   width: 80vmax;
@@ -45,7 +45,7 @@
 
 h1 {
   padding: 1.46vmax 0;
-  font-size: 9vmax;
+  font-size: 10vmax;
   text-transform: uppercase;
 }
 

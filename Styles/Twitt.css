@@ -8,10 +8,9 @@
 
 .twitt {
   position: fixed;
-  /* top: 20.6vmax; */
   font-size: 3vmax;
   top: 12.9vmax;
-  right: 13.5vmax;
+  left: 83.5vmax;
   color: #858d9e;
   color: var(--palette5, #858d9e);
 }

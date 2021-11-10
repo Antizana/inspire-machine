@@ -11,7 +11,7 @@
   fill: var(--palette4, #847f87);
   position: fixed;
   top: 14.5vmax;
-  right: 25vmax;
+  left: 70.6vmax;
   height: 4.39vmax;
   width: 4.39vmax;
   z-index: 1;

@@ -11,14 +11,16 @@ body {
   background-color: var(--palette2, #f7e4dd);
   font-family: "Helvetica Now Display", Helvetica, sans-serif;
   height: 100%;
-  overflow-y: hidden;
+  width: 100%;
+  margin: 1vamx 2vmax;
+  /* overflow-y: hidden; */
 }
 
 .container {
   position: relative;
-  margin: 0px auto;
+  /* margin: 2vmax 1vmax; */
   height: 29.28vmax;
-  width: 90vmax;
+  width: 100vmax;
 }
 
 .faBattery {
