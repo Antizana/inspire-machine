@@ -13,11 +13,9 @@
 }
 
 .machine {
-  position: relative;
-  /* margin-top: 100px; */
-  margin-top: 7.32vmax;
-  /* height: 193px;
-  width: 370px; */
+  position: fixed;
+  left: 27.5vmax;
+  top: 2.8vmax;
   height: 14.13vmax;
   width: 27.09vmax;
   background-image: url(../assets/images/machineFrame.png);
@@ -50,9 +48,6 @@
 
 /* Small Gear */
 .gear1::before {
-  /* width: 80px;
-  height: 80px;
-  top: 59px; */
   width: 5.86vmax;
   height: 5.86vmax;
   top: 4.32vmax;
@@ -112,9 +107,6 @@
 
 /* First Medium Gear */
 .gear1::after {
-  /* width: 100px;
-  height: 100px;
-  left: 64px; */
   width: 7.32vmax;
   height: 7.32vmax;
   left: 4.69vmax;
@@ -165,10 +157,6 @@
 
 /* Big Gear */
 .gear2::before {
-  /* width: 150px;
-  height: 150px;
-  top: 43px;
-  left: 143px; */
   width: 10.98vmax;
   height: 10.98vmax;
   top: 3.15vmax;
@@ -223,9 +211,6 @@
 
 /* Second Medium Gear*/
 .gear2::after {
-  /* width: 100px;
-  height: 100px;
-  left: 271px; */
   width: 7.32vmax;
   height: 7.32vmax;
   left: 19.84vmax;

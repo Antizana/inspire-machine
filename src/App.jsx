@@ -85,6 +85,7 @@ export class App extends React.Component {
       });
 
     fetchForismatic.catch((error) => {
+      // clearInterval(this.doRandomQuote);
       (async () => {
         fetch(urldbGet, {
           method: "GET",
@@ -162,56 +163,61 @@ export class App extends React.Component {
     this.retriveQuote();
     return (
       <div id="quote-box" className="container">
-        <Machine animated={this.state.animateMachine} />
-        <FontAwesomeIcon
-          className="faIcon"
-          icon={faBatteryFull}
-          size="2x"
-          inverse
-        />
-        <ButtonNewQuote onClick={this.clickButton} disabled={this.disabled} />
-        <LightBulb animated={this.state.animateBulb} />
         <div>
-          <OneCable
-            animated={this.state.animateCable1}
-            transitionTime={this.transitionTime1}
-            height="0"
-            // width="20"
-            width="1.46vmax"
-            heightAnimation="9.15vmax"
-            widthAnimation="0"
-            x1="0.73vmax"
-            y1="0"
-            x2="0.73vmax"
-            y2="8.78vmax"
-            classStyleName="l1"
-          />
-
-          <OneCable
-            animated={this.state.animateCable2}
-            transitionTime={this.transitionTime2}
-            height="1.46vmax"
-            width="0"
-            heightAnimation="0"
-            widthAnimation="25.62vmax"
-            x1="0.73vmax"
-            y1="0.73vmax"
-            x2="25.62vmax"
-            y2="0.73vmax"
-            classStyleName="l2"
-            circle={true}
-            cx="24.89vmax"
-            cy="0.73vmax"
-            r=".71vmax"
+          <ButtonNewQuote onClick={this.clickButton} disabled={this.disabled} />
+          <Machine animated={this.state.animateMachine} />
+          <LightBulb animated={this.state.animateBulb} />
+          <FontAwesomeIcon
+            className="faBattery"
+            icon={faBatteryFull}
+            size="2x"
+            inverse
           />
           <Stopper animated={this.state.animateStopper} />
+          <div>
+            <OneCable
+              animated={this.state.animateCable1}
+              transitionTime={this.transitionTime1}
+              height="0"
+              // width="20"
+              width="1.46vmax"
+              heightAnimation="9.15vmax"
+              widthAnimation="0"
+              x1="0.73vmax"
+              y1="0"
+              x2="0.73vmax"
+              y2="8.78vmax"
+              classStyleName="l1"
+            />
+
+            <OneCable
+              animated={this.state.animateCable2}
+              transitionTime={this.transitionTime2}
+              height="1.46vmax"
+              width="0"
+              heightAnimation="0"
+              widthAnimation="25.62vmax"
+              x1="0.73vmax"
+              y1="0.73vmax"
+              x2="25.62vmax"
+              y2="0.73vmax"
+              classStyleName="l2"
+              circle={true}
+              cx="24.89vmax"
+              cy="0.73vmax"
+              r=".71vmax"
+            />
+          </div>
         </div>
-        <Cards
-          animated={this.state.animateCard}
-          onAnimationEnd={() => this.reset()}
-          quoteText={this.quoteText}
-          quoteAuthor={this.quoteAuthor}
-        />
+
+        <div className="cardsContainer">
+          <Cards
+            animated={this.state.animateCard}
+            onAnimationEnd={() => this.reset()}
+            quoteText={this.quoteText}
+            quoteAuthor={this.quoteAuthor}
+          />
+        </div>
         <Twitt Text={`${this.quoteText} - (${this.quoteAuthor})`} />
       </div>
     );

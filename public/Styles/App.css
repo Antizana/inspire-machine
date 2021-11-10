@@ -11,22 +11,23 @@ body {
   background-color: var(--palette2, #f7e4dd);
   font-family: "Helvetica Now Display", Helvetica, sans-serif;
   height: 100%;
-  overflow-y: hidden;
+  width: 100%;
+  margin: 1vmax 2vmax;
+  /* overflow-y: hidden; */
 }
 
 .container {
   position: relative;
-  margin: 0px auto;
-  /* width: 700px;
-  height: 400px; */
-  width: 51.24vmax;
+  /* margin: 1vmax 2vmax; */
   height: 29.28vmax;
+  width: 100vmax;
 }
 
-.faIcon {
+.faBattery {
+  position: fixed;
+  top: 0vmax;
+  left: 29vmax;
   color: #dec0bb;
   color: var(--palette3, #dec0bb);
   font-size: 2.73vmax;
-  margin-left: 0.2vmax;
-  margin-top: 1.5vmax;
 }

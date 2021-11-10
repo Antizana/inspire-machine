@@ -7,9 +7,10 @@
 } */
 
 .twitt {
-  position: absolute;
-  top: 20.6vmax;
-  right: 0.39vmax;
+  position: fixed;
+  font-size: 3vmax;
+  top: 12.9vmax;
+  left: 83.5vmax;
   color: #858d9e;
   color: var(--palette5, #858d9e);
 }

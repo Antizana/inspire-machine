@@ -7,15 +7,12 @@
 } */
 
 .lightbulb {
-  position: absolute;
-  /* top: -50px;
-  right: 180px; */
-  top: -3.66vmax;
-  right: 13.18vmax;
+  position: fixed;
+  top: 7.66vmax;
+  left: 56.52vmax;
 }
+
 .lightbulb svg {
-  /* height: 100px;
-  width: 100px; */
   height: 7.32vmax;
   width: 7.32vmax;
 }

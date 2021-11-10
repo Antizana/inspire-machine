@@ -7,7 +7,8 @@
 } */
 
 .card {
-  font-size: 1.26vmax;
+  margin: 0 auto;
+  font-size: 2.3vmax;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,59 +16,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  /* top: 70px;
-  right: 0;
-  height: 200px;
-  width: 300px; */
-  top: 5.12vmax;
-  right: 0;
-  height: 14.64vmax;
+  position: fixed;
+  top: 17.2vmax;
+  left: 10vmax;
   width: 21.96vmax;
+  height: 26vmax;
+  width: 80vmax;
   background-color: #858d9e;
   background-color: var(--palette5, #858d9e);
   color: #f7e4dd;
   color: var(--palette2, #f7e4dd);
-  /* border-radius: 5%; */
 }
 
 .qtext {
-  /* padding: 10px;
-  padding-top: 20px; */
-  padding: 0.73vmax;
+  font-size: 3vmax;
+  padding: 2.73vmax;
   padding-top: 1.46vmax;
   text-align: left;
 }
 
 .author {
   position: absolute;
-  /* bottom: 10px;
-  right: 10px; */
-  font-size: 1vmax;
+  font-size: 2.37vmax;
   bottom: 0.15vmax;
   right: 0.73vmax;
   text-align: right;
 }
 
 h1 {
-  /* padding: 20px 0; */
   padding: 1.46vmax 0;
-  /* font-size: 50px; */
-  font-size: 3.66vmax;
+  font-size: 10vmax;
   text-transform: uppercase;
 }
 
 .pin {
-  /* height: 10px;
-  width: 10px; */
   height: 0.73vmax;
   width: 0.73vmax;
   background-color: #847f87;
   background-color: var(--palette4, #847f87);
   border-radius: 50%;
   position: absolute;
-  /* top: 10px;
-  left: 10px; */
   top: 0.73vmax;
   left: 0.73vmax;
 }
